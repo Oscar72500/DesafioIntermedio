@@ -1,0 +1,29 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    <h1>Materias</h1>
+    <p>Acá va la info de las Materias</p>
+    
+    Ingresar materias:
+    <br>
+    <form action="" method="POST">{% csrf_token %}
+        <table>
+            {{miFormulario.as_table}}
+
+        </table>
+        <input type="submit",value="Enviar">
+    </form>
+
+    <a href="{% url 'materias'  %}">Este es un botón</a>
+
+    <br>
+
+    <a href="{% url 'busquedaMaterias'  %}">Buscar</a>
+
+
+{% endblock %}

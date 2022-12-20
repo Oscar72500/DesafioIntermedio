@@ -1,0 +1,20 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+
+    <!--Aquí va lo que cambia, y lo asociado a está vista :) -->
+    Comision: {{comision}}
+    <br>
+    Materia:
+    {% for materia in materias %} 
+    {{materia.nombre}}
+    <br>
+    Número de día/s:{{materia.numero_dia}}
+    <br>
+    {%endfor%}
+
+
+{%endblock%}
